@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15225D54-BC66-42BE-858B-29E62EB02C46}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLDCDKT</RootNamespace>
+    <AssemblyName>QLDCDKT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaiThi.cs" />
+    <Compile Include="DiemThi.cs" />
+    <Compile Include="Diemthireport.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaiThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaiThi.Designer.cs">
+      <DependentUpon>FormBaiThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChamdiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChamdiem.Designer.cs">
+      <DependentUpon>FormChamdiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangnhap.Designer.cs">
+      <DependentUpon>FormDangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDKMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDKMon.Designer.cs">
+      <DependentUpon>FormDKMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formdssinhvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formdssinhvien.Designer.cs">
+      <DependentUpon>formdssinhvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlichday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlichday.Designer.cs">
+      <DependentUpon>Formlichday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formlichdayrpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formlichdayrpt.Designer.cs">
+      <DependentUpon>formlichdayrpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTTgiaovien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTTgiaovien.Designer.cs">
+      <DependentUpon>FormTTgiaovien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTTSinhvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTTSinhvien.Designer.cs">
+      <DependentUpon>FormTTSinhvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\function.cs" />
+    <Compile Include="Function\reportfunction.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="QLDCDKTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDCDKTDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDCDKTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDCDKTDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RptDiemthi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptDiemthi.Designer.cs">
+      <DependentUpon>RptDiemthi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaiThi.resx">
+      <DependentUpon>FormBaiThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChamdiem.resx">
+      <DependentUpon>FormChamdiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangnhap.resx">
+      <DependentUpon>FormDangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDKMon.resx">
+      <DependentUpon>FormDKMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formdssinhvien.resx">
+      <DependentUpon>formdssinhvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlichday.resx">
+      <DependentUpon>Formlichday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formlichdayrpt.resx">
+      <DependentUpon>formlichdayrpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTTgiaovien.resx">
+      <DependentUpon>FormTTgiaovien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTTSinhvien.resx">
+      <DependentUpon>FormTTSinhvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\dssinhvienrpt.rdlc" />
+    <EmbeddedResource Include="report\dtbtong.rdlc" />
+    <EmbeddedResource Include="report\lichdayrpt.rdlc" />
+    <EmbeddedResource Include="report\rptDiemthi.rdlc" />
+    <EmbeddedResource Include="RptDiemthi.resx">
+      <DependentUpon>RptDiemthi.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Diemthireport.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.BaiThiDataTable.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.BaiThiRow.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.BaiThiRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.BaiThiRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.DiemThiDataTable.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.DiemThiRow.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.DiemThiRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.DiemThiRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.SinhVienDataTable.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.SinhVienRow.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.SinhVienRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\QLDCDKTDataSet.SinhVienRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\RptDiemthi.datasource" />
+    <None Include="Properties\DataSources\SinhVien.datasource" />
+    <None Include="Properties\DataSources\sinhviendata.datasource" />
+    <None Include="Properties\DataSources\Sinhvienreport.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QLDCDKTDataSet.xsc">
+      <DependentUpon>QLDCDKTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDCDKTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDCDKTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDCDKTDataSet.xss">
+      <DependentUpon>QLDCDKTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDCDKTDataSet1.xsc">
+      <DependentUpon>QLDCDKTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLDCDKTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDCDKTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDCDKTDataSet1.xss">
+      <DependentUpon>QLDCDKTDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Picture\Accept.png" />
+    <Content Include="Picture\Add.png" />
+    <Content Include="Picture\Create.png" />
+    <Content Include="Picture\Delete.png" />
+    <Content Include="Picture\Edit.png" />
+    <Content Include="Picture\Exit.png" />
+    <Content Include="Picture\giaovien.jpg" />
+    <Content Include="Picture\Log out.png" />
+    <Content Include="Picture\Open file.png" />
+    <Content Include="Picture\Open folder.png" />
+    <Content Include="Picture\Refresh.png" />
+    <Content Include="Picture\report.jpg" />
+    <Content Include="Picture\sinhvien.jpg" />
+    <Content Include="Picture\Stop.png" />
+    <Content Include="Picture\Tick.png" />
+    <Content Include="Properties\Resources\Accept.png" />
+    <Content Include="Properties\Resources\Add.png" />
+    <Content Include="Properties\Resources\Create.png" />
+    <Content Include="Properties\Resources\Delete.png" />
+    <Content Include="Properties\Resources\Edit.png" />
+    <Content Include="Properties\Resources\Exit.png" />
+    <Content Include="Properties\Resources\giaovien.jpg" />
+    <Content Include="Properties\Resources\Log out.png" />
+    <Content Include="Properties\Resources\Open file.png" />
+    <Content Include="Properties\Resources\Open folder.png" />
+    <Content Include="Properties\Resources\Refresh.png" />
+    <Content Include="Properties\Resources\report.jpg" />
+    <Content Include="Picture\Search.png" />
+    <Content Include="Properties\Resources\sinhvien.jpg" />
+    <Content Include="Properties\Resources\Stop.png" />
+    <Content Include="Properties\Resources\Tick.png" />
+    <None Include="Resources\Search.png" />
+    <Content Include="Properties\Resources\eye %281%29.jpg" />
+    <Content Include="Properties\Resources\eye %282%29.jpg" />
+    <Content Include="Properties\Resources\eye.jpg" />
+    <None Include="Properties\Resources\Search.png" />
+    <Content Include="Resources\Accept.png" />
+    <Content Include="Resources\Add.png" />
+    <Content Include="Resources\Create.png" />
+    <Content Include="Resources\Delete.png" />
+    <Content Include="Resources\Edit.png" />
+    <Content Include="Resources\Exit.png" />
+    <Content Include="Resources\eye %281%29.jpg" />
+    <Content Include="Resources\eye %282%29.jpg" />
+    <Content Include="Resources\eye.jpg" />
+    <Content Include="Resources\giaovien.jpg" />
+    <Content Include="Resources\Log out.png" />
+    <Content Include="Resources\Open file.png" />
+    <Content Include="Resources\Open folder.png" />
+    <Content Include="Resources\Refresh.png" />
+    <Content Include="Resources\report.jpg" />
+    <Content Include="Resources\sinhvien.jpg" />
+    <Content Include="Resources\Stop.png" />
+    <Content Include="Resources\Tick.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
